@@ -22,7 +22,7 @@ VITE_DEEPL_API_KEY=YOUR_API_KEY
 Para instalar las dependencias de ambos módulos, ejecute el siguiente comando en la raíz del proyecto:
 
 ```bash
-npm run install-a
+npm run install-all
 ```
 
 ## Ejecución
