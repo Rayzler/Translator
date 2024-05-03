@@ -1,0 +1,20 @@
+{
+  "name": "translator-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file .env  app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "2.8.5",
+    "deepl-node": "1.13.0",
+    "express": "4.19.2",
+    "translator": "file:.."
+  }
+}
