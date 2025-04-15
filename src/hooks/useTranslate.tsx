@@ -1,4 +1,4 @@
-import { translateText } from "@/app/actions/translate";
+import { translateText } from "@/actions/translate";
 import { AUTO_LANGUAGE } from "@/constants/languages";
 import { AutoLanguageCode } from "@/interfaces/translation";
 import {

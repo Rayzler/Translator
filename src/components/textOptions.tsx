@@ -4,6 +4,7 @@ import {
   TargetLanguageCode
 } from "@/interfaces/translation";
 import { VolumeIcon, CopyIcon } from "./icons";
+import { BCP47_LANGUAGES } from "@/constants/languages";
 
 type Props = {
   value: string;
@@ -28,8 +29,7 @@ const TextOptions = ({
   const handleSpeak = () => {
     if ("speechSynthesis" in window) {
       const utterance = new SpeechSynthesisUtterance(value);
-      // TODO: Set the language based on the selected language
-      // utterance.lang = BCP47_LANGUAGES[language as LanguageCode];
+      utterance.lang = BCP47_LANGUAGES[language as TargetLanguageCode];
       window.speechSynthesis.speak(utterance);
     } else {
       showNotification &&

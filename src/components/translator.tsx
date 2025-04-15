@@ -1,12 +1,16 @@
 "use client";
 
-import { AUTO_LANGUAGE, PickerType } from "@/constants/languages";
+import { PickerType } from "@/constants/languages";
 import LanguagePicker from "./languagePicker";
 import TextOptions from "./textOptions";
 import { useToast } from "@/hooks/useToast";
 import { SwipeIcon } from "./icons";
 import clsx from "clsx";
 import { useTranslate } from "@/hooks/useTranslate";
+import {
+  SourceLanguageCode,
+  TargetLanguageCode
+} from "@/interfaces/translation";
 
 export default function Translator() {
   const { showToast, showToastNotification, toastMessage } = useToast();
@@ -42,7 +46,7 @@ export default function Translator() {
               <LanguagePicker
                 type={PickerType.From}
                 value={sourceLanguage}
-                onChange={setSourceLanguage}
+                onChange={(lan) => setSourceLanguage(lan as SourceLanguageCode)}
               />
               <TextOptions
                 value={sourceText}
@@ -65,7 +69,7 @@ export default function Translator() {
               <LanguagePicker
                 type={PickerType.To}
                 value={targetLanguage}
-                onChange={setTargetLanguage}
+                onChange={(lan) => setTargetLanguage(lan as TargetLanguageCode)}
               />
               <TextOptions
                 value={translatedText}

@@ -14,18 +14,18 @@ import { ArrowDownIcon } from "./icons";
 type Props =
   | {
       type: PickerType.From;
-      onChange: (language: SourceLanguageCode | AutoLanguageCode) => void;
+      onChange: (language: string) => void;
       value: SourceLanguageCode | AutoLanguageCode;
     }
   | {
       type: PickerType.To;
-      onChange: (language: TargetLanguageCode) => void;
+      onChange: (language: string) => void;
       value: TargetLanguageCode;
     };
 
 const LanguagePicker = ({ type, value, onChange }: Props) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange(event.target.value as any);
+    onChange(event.target.value);
   };
 
   const languageCodes =

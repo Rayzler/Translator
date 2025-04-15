@@ -1,4 +1,5 @@
 export const BCP47_LANGUAGES = {
+  "en-US": "en-US",
   en: "en-US",
   es: "es-MX",
   fr: "fr-FR",
