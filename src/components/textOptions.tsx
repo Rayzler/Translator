@@ -22,7 +22,9 @@ const TextOptions = ({
   // Copy translated text
   const handleCopyText = () => {
     navigator.clipboard.writeText(value);
-    showNotification && showNotification("Copied to clipboard");
+    if (showNotification) {
+      showNotification("Copied to clipboard");
+    }
   };
 
   // Text-to-speech (mock implementation)
@@ -32,8 +34,9 @@ const TextOptions = ({
       utterance.lang = BCP47_LANGUAGES[language as TargetLanguageCode];
       window.speechSynthesis.speak(utterance);
     } else {
-      showNotification &&
+      if (showNotification) {
         showNotification("Your browser does not support text-to-speech");
+      }
     }
   };
 
