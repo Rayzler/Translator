@@ -1,6 +1,7 @@
 {
   "name": "translation-app",
   "version": "0.1.0",
+  "description": "a simple translation app using Next.js and DeepL API",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
